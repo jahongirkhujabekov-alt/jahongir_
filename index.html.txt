@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Darina</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: linear-gradient(135deg, #ffe6f0, #fff0f5);
+      font-family: 'Arial', sans-serif;
+    }
+
+    .letter {
+      display: inline-block;
+      font-size: 70px;
+      font-weight: bold;
+      background: linear-gradient(90deg, #ff69b4, #ffb6c1, #ff69b4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: 0 2px;
+      animation: bounce 1.5s ease-in-out forwards, shine 3s linear infinite;
+      animation-delay: calc(var(--i) * 0.2s);
+    }
+
+    @keyframes bounce {
+      0% { transform: translateY(-100px); opacity: 0; }
+      50% { transform: translateY(20px); opacity: 1; }
+      100% { transform: translateY(0px); opacity: 1; }
+    }
+
+    @keyframes shine {
+      0% { background-position: 0%; }
+      100% { background-position: 200%; }
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <span class="letter" style="--i:0">🌸</span>
+    <span class="letter" style="--i:1">D</span>
+    <span class="letter" style="--i:2">a</span>
+    <span class="letter" style="--i:3">r</span>
+    <span class="letter" style="--i:4">i</span>
+    <span class="letter" style="--i:5">n</span>
+    <span class="letter" style="--i:6">a</span>
+    <span class="letter" style="--i:7">🌸</span>
+  </div>
+</body>
+</html>
